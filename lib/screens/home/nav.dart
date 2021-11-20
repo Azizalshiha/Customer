@@ -1,6 +1,6 @@
 import 'package:faality/shared/const.dart';
 import 'package:flutter/material.dart';
-import 'package:faality/screens/home/home.dart';
+import 'package:faality/screens/home/notifications.dart';
 import 'package:faality/screens/home/messages.dart';
 import 'package:faality/screens/home/Search.dart';
 import 'package:faality/screens/home/profile.dart';
@@ -18,7 +18,7 @@ class _navState extends State<nav> {
 
   final screens = [
     Search(),
-    Home(),
+    Notifications(),
     Messsges(),
     Profile(),
   ];
