@@ -1,18 +1,14 @@
-import 'dart:ui';
-
-import 'package:faality/services/auth.dart';
 import 'package:faality/shared/const.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+class Notifications extends StatefulWidget {
+  const Notifications({Key? key}) : super(key: key);
 
   @override
-  _HomeState createState() => _HomeState();
+  _NotificationsState createState() => _NotificationsState();
 }
 
-class _HomeState extends State<Home> {
-  int _currentIndex = 0;
+class _NotificationsState extends State<Notifications> {
 
   @override
   Widget build(BuildContext context) {
