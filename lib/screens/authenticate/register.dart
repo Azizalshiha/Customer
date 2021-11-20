@@ -1,13 +1,9 @@
-import 'package:faality/services/auth.dart';
+import 'package:faality/screens/authenticate/sign_in.dart';
 import 'package:faality/shared/const.dart';
 import 'package:flutter/material.dart';
 
 
 class Register extends StatefulWidget {
-
-
-  final Function? toggleView;
-  Register({ this.toggleView });
 
   @override
   _RegisterState createState() => _RegisterState();
@@ -15,7 +11,6 @@ class Register extends StatefulWidget {
 
 class _RegisterState extends State<Register> {
 
-  final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
 
   String email = '';
@@ -40,7 +35,7 @@ class _RegisterState extends State<Register> {
               primary: const Color(0xffF0D5A3),
             ),
             onPressed: (){
-              widget.toggleView!();
+              SignIn();
             },
           )
         ],
@@ -81,13 +76,7 @@ class _RegisterState extends State<Register> {
                         color: Colors.white
                     ),
                   ),
-                  onPressed: () async {
-                    if(_formKey.currentState!.validate()){
-                      dynamic result = await _auth.registerWithEmailAndPassword(email, password);
-                      if(result == null){
-                        setState(() => error = 'please provide a valide email');
-                      }
-                    }
+                  onPressed: ()  {
                   }
               ),
               SizedBox(height: 12),
